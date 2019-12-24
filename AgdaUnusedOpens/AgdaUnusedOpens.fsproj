@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="AssemblyInfo.fs" />
+        <Compile Include="Seq.fs" />
+        <Compile Include="Types.fs" />
+        <Compile Include="AgdaFile.fs" />
+        <Compile Include="AgdaCompiler.fs" />
+        <Compile Include="Graph.fs" />
+        <Compile Include="OpenStatement.fs" />
+    </ItemGroup>
+
+</Project>

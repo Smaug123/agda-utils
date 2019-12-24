@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+        <GenerateProgramFile>false</GenerateProgramFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FsUnit" Version="3.8.0" />
+        <PackageReference Include="nunit" Version="3.12.0" />
+        <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+        <PackageReference Include="FsCheck" Version="2.14.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="Utils.fs" />
+        <Compile Include="TestSeq.fs" />
+        <Compile Include="TestGraph.fs" />
+        <Compile Include="TestAgdaFile.fs" />
+        <EmbeddedResource Include="Example.dot" />
+        <EmbeddedResource Include="Example.agda" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AgdaUnusedOpens\AgdaUnusedOpens.fsproj" />
+    </ItemGroup>
+
+</Project>
