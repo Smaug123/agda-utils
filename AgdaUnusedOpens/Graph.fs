@@ -71,6 +71,7 @@ module Graph =
         proc.StartInfo.Arguments <- sprintf "%s --dependency-graph=%s" (Path.combine agda.AgdaRoot f.Path).FullName tmp
         let res = proc.Start ()
         assert (res = true)
+        proc.WaitForExit ()
         tmp
         |> File.ReadAllText
         |> parse

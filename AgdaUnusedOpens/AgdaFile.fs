@@ -21,6 +21,7 @@ module Path =
     let combine (agdaRoot : DirectoryInfo) (p : Path) : FileInfo =
         p
         |> fold (fun soFar next -> Path.Combine (soFar, next)) agdaRoot.FullName
+        |> sprintf "%s.agda"
         |> FileInfo
 
     let rename (newModule : string) (p : Path) =
