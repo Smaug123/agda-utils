@@ -67,6 +67,12 @@ module AgdaFile =
             Contents = lines
             ModuleLine = moduleLineNo
         }
+        
+    let makeFromFile (f : FileInfo) : AgdaFile =
+        f.FullName
+        |> File.ReadAllLines
+        |> List.ofArray
+        |> make
 
     let flush (agdaRoot : DirectoryInfo) (f : AgdaFile) : unit =
         let location = Path.combine agdaRoot f.Path

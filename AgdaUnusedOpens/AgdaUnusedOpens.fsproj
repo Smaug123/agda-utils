@@ -10,6 +10,7 @@
         <Compile Include="Types.fs" />
         <Compile Include="AgdaFile.fs" />
         <Compile Include="AgdaCompiler.fs" />
+        <Compile Include="AdjacencyList.fs" />
         <Compile Include="Graph.fs" />
         <Compile Include="OpenStatement.fs" />
     </ItemGroup>
