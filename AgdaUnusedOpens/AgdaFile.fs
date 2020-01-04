@@ -7,6 +7,7 @@ open AgdaUnusedOpens.Types
 
 [<RequireQualifiedAccess>]
 module Path =
+
     let fold<'s> (f : 's -> string -> 's) (initial : 's) (p : Path) : 's =
         p.Tail
         |> List.fold f (f initial p.Head)
@@ -67,7 +68,7 @@ module AgdaFile =
             Contents = lines
             ModuleLine = moduleLineNo
         }
-        
+
     let makeFromFile (f : FileInfo) : AgdaFile =
         f.FullName
         |> File.ReadAllLines
