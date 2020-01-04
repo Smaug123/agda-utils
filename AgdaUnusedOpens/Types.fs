@@ -6,4 +6,3 @@ type Path =
             Head : string
             Tail : string list
         }
-
